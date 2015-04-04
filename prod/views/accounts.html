@@ -1,0 +1,12 @@
+<section class="main" ng-controller="accountDetails">
+	<h2>Accounts list</h2>
+	<h3>Add accounts</h3>
+	<form name="accountsForm" ng-submit="addAccounts()" novalidate>
+		<input type="text" name="username" ng-model="username">
+		<button type="submit" class="btn" ng-disabled="accountsForm.$invalid">Add</button>
+	</form>
+	<div ng-repeat="account in accounts">
+		<button ng-click="deleteUser(account)">X</button>
+		<p>Key: {{account.$id}} - {{account.username}}</p>
+	</div>
+</section>

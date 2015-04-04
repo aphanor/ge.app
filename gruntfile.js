@@ -15,6 +15,11 @@ module.exports = function(grunt) {
 		// Minified JavaScript		
 		
 		uglify: {
+			options: {
+			  mangle: {
+			     except: ['jQuery', 'angular']
+			  }
+			},
 			my_target: {
 				files: {
 					'prod/js/app.js': ['dev/js/*.js']

@@ -5,13 +5,23 @@
 @import "_variables";
 @import "_base";
 @modules "modules";
-@import "font-awesome-compass";
-@import "font-awesome";
+
+// Import Font Awesome
+// @import "font-awesome-compass";
+// @import "font-awesome";
+
+// Import Bootstrap Compass integration
+@import "_bootstrap-variables";
+
+body {
+	margin: 0 auto;
+	padding: 0;
+}
 
 div#main {
 	margin: 2em;
 	border-top: 1px solid $grey;
-	height: 600px;
+	min-height: 600px;
 	border-bottom: 1px solid $grey;
 }
 
@@ -23,4 +33,9 @@ div#main {
 	font-size: 10px;
 	color: #aaa;
 	text-decoration: none;
+}
+
+section.main {
+	margin:0 auto;
+	width: 800px;
 }
