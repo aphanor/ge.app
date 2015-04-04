@@ -1,4 +1,9 @@
 <ul class="nav nav-pills pull-right">
     <li class="active"><a ng-href="login">Login</a></li>
-    <li><a class="btn" ng-href="registration">Register</a></li>
+    <li><a class="btn" ng-href="register">Register</a></li>
 </ul>
+
+<div style="width: 100%" ng-show="currentUser" ng-controller="loginController">
+	<p>Hello {{ currentUser }} !</p>
+	<p><a ng-click="logOut()" href="#">Log-out</a></p>
+</div>

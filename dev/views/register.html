@@ -1,12 +1,10 @@
 <section class="main" ng-controller="registrationController">
-	<form name="login" ng-submit="soumettre()" novalidate>
+	<form name="login" ng-submit="regist()" novalidate>
 		<h3>Please enter your username and password</h3>
 		<input name="email" type="text" placeholder="Email" ng-model="user.email" ng-required="true" autofocus><br><br>
 		<p ng-show="login.email.$invalid && login.email.$touched && email.length">This is not an email.</p>
 		<input name="password" type="password" placeholder="Password" ng-model="user.password" ng-required="true"><br><br>
 		<p ng-show="login.password.$invalid && login.password.$touched">Your password is incorrect.</p>
-		<button type="submit" class="btn" ng-show="user.password">Login</button><br><br>
-		<p ng-show="message">Incorrect Login!</p>
-		<p>Or register <a ng-href="register">here</a></p>
+		<button type="submit" class="btn" ng-show="user.password">Register</button><br><br>
 	</form>
 </section>

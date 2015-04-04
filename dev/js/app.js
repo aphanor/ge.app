@@ -1,4 +1,4 @@
-var scannerapp = angular.module('scannerapp', ['ngRoute', 'appControllers', 'firebase']);
+var scannerapp = angular.module('scannerapp', ['ngRoute', 'appControllers', 'firebase']).constant('FIREBASE_URL', 'https://shining-torch-5764.firebaseio.com/');
 
 var appControllers = angular.module('appControllers', ['firebase']);
 
@@ -11,8 +11,8 @@ scannerapp.config(['$routeProvider','$locationProvider', function($routeProvider
 			templateUrl: 'views/login.html',
 			controller: 'registrationController'
 	}).
-		when('/registration', {
-			templateUrl: 'views/registration.html',
+		when('/register', {
+			templateUrl: 'views/register.html',
 			controller: 'registrationController'
 	}).
 	    when('/accounts', {

@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 			},
 			my_target: {
 				files: {
-					'prod/js/app.js': ['dev/js/*.js']
+					'prod/js/app.js': ['dev/js/**.js/**']
 				}
 			}
 		},
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 				livereload: true
 			},
 			scripts: {
-				files: ['dev/js/*.js'],
+				files: ['dev/js/**/**'],
 				tasks: ['uglify']
 			},
 			html: {
